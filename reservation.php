@@ -3,6 +3,7 @@ require 'header.php';
 ?>
 <title>ユーザー名とパスワードの入力フォーム</title>
 </head>
+
 <body>
     <h2>ユーザー名とパスワードの入力フォーム</h2>
     <form method="POST" action="">
@@ -28,7 +29,7 @@ require 'header.php';
             $statement->bindParam(':username', $username);
             $statement->bindParam(':pass', $hashedPassword); // ハッシュ化したパスワードを格納
             $statement->execute();
-            echo "データの挿入が完了しました！3秒後にログイン画面に飛びます";
+            echo "登録が完了しました！3秒後にログイン画面に飛びます";
             header("refresh:3;url=login.php");
         } catch (PDOException $e) {
             echo "エラー: " . $e->getMessage();
