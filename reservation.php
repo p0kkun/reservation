@@ -4,6 +4,7 @@ require 'header.php';
 <title>ユーザー名とパスワードの入力フォーム</title>
 </head>
 
+
 <body>
     <h2>ユーザー名とパスワードの入力フォーム</h2>
     <form method="POST" action="">
